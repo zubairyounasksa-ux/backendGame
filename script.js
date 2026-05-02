@@ -435,7 +435,7 @@ async function pollPlayer() {
     }
 
     // Phase updates on same question
-    if (data.phase === "question" && S.phase !== "question") {
+    if (data.phase === "question" && S.phase !== "question" && S.phase !== "waiting") {
       S.phase = "question";
       setPlayerPhase("question");
     } else if (data.phase === "waiting" && S.phase === "question") {
